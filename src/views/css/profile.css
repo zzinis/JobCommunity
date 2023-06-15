@@ -139,3 +139,66 @@
 #editpassword {
 	margin-left: 160px;
 }
+
+@media screen and (max-width: 999px) {
+	.profileform {
+		max-width: 100%;
+	}
+
+	.profileform .profile_wrap > form {
+		background-color: white;
+		z-index: 0;
+		width: 100%;
+		height: 601px;
+		margin: 0 auto;
+		max-width: 100%;
+		padding: 40px;
+	}
+
+	.profileform .profile_wrap form .profile {
+		width: 100%;
+		padding: 55px 0;
+		border-bottom: 1px solid #333;
+	}
+}
+
+@media screen and (max-width: 639px) {
+	.profileform {
+		max-width: 100%;
+	}
+
+	.profileform .profile_wrap > form {
+		background-color: white;
+		z-index: 0;
+		width: 100%;
+		height: 601px;
+		margin: 0 auto;
+		max-width: 100%;
+		padding: 40px;
+	}
+
+	.profileform .profile_wrap form .profile {
+		width: 100%;
+		height: 650px;
+		padding: 55px 0;
+		border-bottom: 1px solid #333;
+	}
+
+	.profilerow {
+		display: flex;
+	}
+
+	.profilerows {
+		border-bottom: 1px solid #333;
+		padding-bottom: 34px;
+		display: flex;
+	}
+	.profileform
+		.profile_wrap
+		form
+		.profile
+		.profilerows
+		input[type="checkbox"] {
+		height: 40px;
+	}
+}

@@ -172,4 +172,28 @@ module.exports = {
       return res.status(400).json({ errMessage: "로그아웃 실패" });
     }
   },
+  testSignin: async (req, res) => {
+    try {
+      // const { email, password } = req.body;
+      const email = 'user';
+      const password = 'user';
+      const user = await models.user.findOne({
+        where: { email },
+      });
+      if (!user) {
+        return res
+          .status(401)
+          .json({ errMessage: "아이디나 비밀번호가 일치하지 않습니다." });
+      }
+      //jwt 를 이용한 토큰 발급
+      const token = jwt.sign({ userId: user.id }, "jomcommunity-key", {
+        expiresIn: "1h",
+      });
+      res.cookie("authorization", `Bearer ${token}`);
+      res.status(200).json({ message: "로그인 성공" });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json({ errMessage: "로그인 실패" });
+    }
+  },
 };

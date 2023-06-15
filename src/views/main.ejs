@@ -524,15 +524,15 @@
             draggable: true,     //드래그 가능 여부 
             responsive: [ // 반응형 웹 구현 옵션
               {
-                breakpoint: 960, //화면 사이즈 960px
+                breakpoint: 999, //화면 사이즈 960px
                 settings: {
-                  slidesToShow: 4
+                  slidesToShow: 1
                 }
               },
               {
-                breakpoint: 768, //화면 사이즈 768px
+                breakpoint: 639, //화면 사이즈 768px
                 settings: {
-                  slidesToShow: 5
+                  slidesToShow: 1
                 }
               }
             ]
@@ -772,7 +772,7 @@
 
         });
 
-        function signin(){
+        function signin() {
           const email = document.getElementById('email').value
           const password = document.getElementById('password').value
 
@@ -781,9 +781,9 @@
           }
 
           axios.post('/users/signin', data).then((res) => {
-          alert(res.data.message)
-          window.location.href = '/'
-          }).catch((err) =>{
+            alert(res.data.message)
+            window.location.href = '/'
+          }).catch((err) => {
             console.error(err)
           })
 

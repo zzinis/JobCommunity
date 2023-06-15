@@ -172,3 +172,9 @@
 	line-height: 20px;
 	color: rgb(153, 153, 153);
 } /*# sourceMappingURL=answer.css.map */
+
+@media screen and (max-width: 999px) {
+	.answer .answer_box {
+		width: 100%;
+	}
+}

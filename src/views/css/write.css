@@ -83,3 +83,19 @@ form .wrap .txt_box button {
 	cursor: pointer;
 	font: bold 16px/1 "Noto Sans KR", sans-serif;
 }
+
+@media screen and (max-width: 999px) {
+	form {
+		width: 100%;
+		padding: 60px 40px;
+	}
+	form .wrap {
+		width: 100%;
+	}
+
+	form .wrap .tit {
+		font: bold 20px/1 "Noto Sans KR", sans-serif;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
