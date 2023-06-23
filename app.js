@@ -14,7 +14,7 @@ const session = require("express-session");
 // DB 동기화
 // sequelize 설정 - 동기화 진행
 sequelize
-  .sync({ force: false }) //true면 서버 실행마다 테이블 재생성
+  .sync({ force: true }) //true면 서버 실행마다 테이블 재생성
   .then(() => {
     console.log("데이터베이스 연결 성공");
   })
@@ -49,7 +49,7 @@ async function initData() {
         category_name: "기술스펙",
       });
     }
-  } catch (error) {}
+  } catch (error) { }
 }
 initData();
 app.use(cookieParser());
